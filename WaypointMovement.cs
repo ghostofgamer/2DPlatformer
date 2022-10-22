@@ -19,17 +19,7 @@ public class WaypointMovement : MonoBehaviour
 
     private void Update()
     {
-        if (_currentPoint == 0)
-        {
-            bool flip = false;
-            GetPosition(flip);
-        }
-
-        else
-        {
-            bool flip = true;
-            GetPosition(flip);
-        }
+        GetPosition(_currentPoint != 0);
     }
 
     private void GetPosition(bool flip)
