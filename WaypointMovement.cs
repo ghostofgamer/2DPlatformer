@@ -27,7 +27,6 @@ public class WaypointMovement : MonoBehaviour
         Transform target = _points[_currentPoint];
         var direction = (target.position - transform.position).normalized;
         transform.position = Vector3.MoveTowards(transform.position, target.position, _speed * Time.deltaTime);
-
         _renderer.flipX = flip;
 
         if (transform.position == target.position)
